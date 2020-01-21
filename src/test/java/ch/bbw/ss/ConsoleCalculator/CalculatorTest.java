@@ -41,15 +41,21 @@ public class CalculatorTest {
 		assertTrue(testee.subtract(-25,  -10) == -15);
 	}
 	
-	// No exception excepted - otherwise: test has an error
+	// No exception expected - otherwise: test has an error
 	@Test
-	public void testDivisionTwoPositivesIsOk() throws java.lang.ArithmeticException {
+	public void testDivisionTwoPositivesIsOk() throws ArithmeticException {
 		assertTrue(testee.divide(25,  5) == 5);
 	}
 	
-	// This test forces the exception and contains an error
-	@Test
-	public void testDivisionForceUnexpectedException() throws java.lang.ArithmeticException {
-		assertTrue(testee.divide(10, 0) == 5);
+	// This test forces an unexpected exception and contains an error
+//	@Test
+//	public void testDivisionForceUnexpectedException() throws java.lang.ArithmeticException {
+//		assertTrue(testee.divide(10, 0) == 5);
+//	}
+	
+	// Exception expected - otherwise: test has an error
+	@Test (expected=ArithmeticException.class)
+	public void testDivisionByZeroThrowsExpectedException() throws ArithmeticException {
+		assertTrue(testee.divide(25,  0) == Double.POSITIVE_INFINITY); // POSITIVE_INFINITY: A constant holding the positive infinity of type double.
 	}
 }
