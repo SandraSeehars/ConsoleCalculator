@@ -32,4 +32,9 @@ public class Calculator {
 		System.out.println(string);
 		return string; 
 	}
+	
+	public String helloWorldPublic(String string) {
+		System.out.println(string);
+		return string; 
+	}
 }
