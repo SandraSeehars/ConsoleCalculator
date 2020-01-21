@@ -24,6 +24,6 @@ public class CalculatorTest {
 	@Test
 	public void testSubtractionTwoPositivesIsOk() {
 		testee = new Calculator();
-		assertTrue(testee.subtract(10, 25) == 35);
+		assertTrue(testee.subtract(25,  10) == 15);
 	}
 }
