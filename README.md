@@ -54,10 +54,12 @@ public class App {
 }
 ```
 #Why Maven
+
 Maven is a powerful project management tool that is based on POM (project object model). It is used for projects build, dependency and documentation. It simplifies the build process like ANT. In short terms we can tell maven is a tool that can be used for building and managing any Java-based project.
 [Source](https://www.geeksforgeeks.org/introduction-apache-maven-build-automation-tool-java-projects/)
 
 #Why Unit testing
+
 Peace of mind
 
 As programmers, we are trained to worry. It becomes second nature to think about what might go wrong. And this tendency to overthink slips from work into our personal lives.
@@ -66,6 +68,7 @@ Unit tests help to eliminate worry. A well-tested module is something you can tr
 [Source](https://medium.com/@corneliu/unit-testing-why-3490d08e89f2)
 
 #Why Travis
+
 What is Continuous Integration (CI)? Continuous Integration is the practice of merging in small code changes frequently - rather than merging in a large change at the end of a development cycle. The goal is to build healthier software by developing and testing in smaller increments. This is where Travis CI comes in.
 
 As a continuous integration platform, Travis CI supports your development process by automatically building and testing code changes, providing immediate feedback on the success of the change. Travis CI can also automate other parts of your development process by managing deployments and notifications.
