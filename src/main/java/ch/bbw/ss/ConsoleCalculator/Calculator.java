@@ -26,4 +26,10 @@ public class Calculator {
 		System.out.println(string);
 		return string; 
 	}
+	
+	// package is the default modifier - no need to write package protected
+	String helloWorldPackage(String string) {
+		System.out.println(string);
+		return string; 
+	}
 }
