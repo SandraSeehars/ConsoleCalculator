@@ -6,8 +6,9 @@ package ch.bbw.ss.ConsoleCalculator;
  * @author Sandra Seehars
  * @version 0.0.1
  */
-
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -15,12 +16,17 @@ import org.junit.Test;
 public class CalculatorTest {
 
 	Calculator testee;
+	// created constants to have the same String input for the visibility test methods
+	private final static String HELLO_WORLD_TEST_STRING = "Hello World!";
+	private final static String HELLO_WORLD_EXPECTED_RESULT_STRING = "Hello World!"; 
+	
 	
 	@Before
 	public void setUp() {
 		testee = new Calculator();
 	}
 
+	// ADDITION TEST METHODS
 	@Test
 	public void testSumTwoPositivesIsOk() {
 		assertTrue(testee.sum(10, 25) == 35);
@@ -31,6 +37,7 @@ public class CalculatorTest {
 		assertTrue(testee.sum(-10,  -25) == -35);
 	}
 	
+	// SUBTRACTION TEST METHODS
 	@Test
 	public void testSubtractionTwoPositivesIsOk() {
 		assertTrue(testee.subtract(25,  10) == 15);
@@ -41,6 +48,7 @@ public class CalculatorTest {
 		assertTrue(testee.subtract(-25,  -10) == -15);
 	}
 	
+	// DIVISION TEST METHODS
 	// No exception expected - otherwise: test has an error
 	@Test
 	public void testDivisionTwoPositivesIsOk() throws ArithmeticException {
@@ -53,9 +61,20 @@ public class CalculatorTest {
 //		assertTrue(testee.divide(10, 0) == 5);
 //	}
 	
+	// VISIBILITY TEST METHODS
 	// Exception expected - otherwise: test has an error
 	@Test (expected=ArithmeticException.class)
 	public void testDivisionByZeroThrowsExpectedException() throws ArithmeticException {
 		assertTrue(testee.divide(25,  0) == Double.POSITIVE_INFINITY); // POSITIVE_INFINITY: A constant holding the positive infinity of type double.
+	}
+	
+	@Test
+	public void testHelloWorldProtected() {
+		assertEquals(HELLO_WORLD_EXPECTED_RESULT_STRING, testee.helloWorldProtected(HELLO_WORLD_TEST_STRING));
+	}
+	
+	@Test
+	public void testHelloWorldProtectedWithWrongTextInput() {
+		assertNotEquals(HELLO_WORLD_EXPECTED_RESULT_STRING, testee.helloWorldProtected("Hello Bob!"));
 	}
 }
