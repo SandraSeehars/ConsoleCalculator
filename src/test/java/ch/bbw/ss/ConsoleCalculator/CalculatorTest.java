@@ -27,19 +27,17 @@ public class CalculatorTest {
 	}
 	
 	@Test
-	public void testSumZweiNegativesIsOk() {
+	public void testSumTwoNegativesIsOk() {
 		assertTrue(testee.sum(-10,  -25) == -35);
 	}
 	
 	@Test
 	public void testSubtractionTwoPositivesIsOk() {
-		testee = new Calculator();
 		assertTrue(testee.subtract(25,  10) == 15);
 	}
 	
 	@Test
 	public void testSubtractionTwoNegativesIsOk() {
-		testee = new Calculator();
 		assertTrue(testee.subtract(-25,  -10) == -15);
 	}
 }
