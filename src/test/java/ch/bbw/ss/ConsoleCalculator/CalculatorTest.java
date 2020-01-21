@@ -83,4 +83,9 @@ public class CalculatorTest {
 	public void testHelloWorldPackage() {
 		assertEquals(HELLO_WORLD_EXPECTED_RESULT_STRING, testee.helloWorldPackage(HELLO_WORLD_TEST_STRING));
 	}
+	
+	@Test
+	public void testHelloWorldPublic() {
+		assertEquals(HELLO_WORLD_EXPECTED_RESULT_STRING, testee.helloWorldPublic(HELLO_WORLD_TEST_STRING));
+	}
 }
