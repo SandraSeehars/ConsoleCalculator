@@ -9,16 +9,26 @@ package ch.bbw.ss.ConsoleCalculator;
 
 import static org.junit.Assert.*;
 
+import org.junit.Before;
 import org.junit.Test;
 
 public class CalculatorTest {
 
 	Calculator testee;
+	
+	@Before
+	public void setUp() {
+		testee = new Calculator();
+	}
 
 	@Test
 	public void testSumTwoPositivesIsOk() {
-		testee = new Calculator();
 		assertTrue(testee.sum(10, 25) == 35);
+	}
+	
+	@Test
+	public void testSumZweiNegativesIsOk() {
+		assertTrue(testee.sum(-10,  -25) == -35);
 	}
 	
 	@Test
