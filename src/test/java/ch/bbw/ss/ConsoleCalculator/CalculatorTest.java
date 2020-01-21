@@ -73,8 +73,14 @@ public class CalculatorTest {
 		assertEquals(HELLO_WORLD_EXPECTED_RESULT_STRING, testee.helloWorldProtected(HELLO_WORLD_TEST_STRING));
 	}
 	
+	// this is a test method that will cause an error
+//	@Test
+//	public void testHelloWorldProtectedWithWrongTextInput() {
+//		assertNotEquals(HELLO_WORLD_EXPECTED_RESULT_STRING, testee.helloWorldProtected("Hello Bob!"));
+//	}
+	
 	@Test
-	public void testHelloWorldProtectedWithWrongTextInput() {
-		assertNotEquals(HELLO_WORLD_EXPECTED_RESULT_STRING, testee.helloWorldProtected("Hello Bob!"));
+	public void testHelloWorldPackage() {
+		assertEquals(HELLO_WORLD_EXPECTED_RESULT_STRING, testee.helloWorldPackage(HELLO_WORLD_TEST_STRING));
 	}
 }
