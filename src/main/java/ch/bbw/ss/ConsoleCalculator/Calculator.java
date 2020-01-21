@@ -21,4 +21,9 @@ public class Calculator {
 	public int divide(int dividend, int divisor) {
 		return dividend / divisor; 
 	}
+	
+	protected String helloWorldProtected(String string) {
+		System.out.println(string);
+		return string; 
+	}
 }
