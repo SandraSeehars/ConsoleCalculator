@@ -37,6 +37,21 @@ public class CalculatorTest {
 		assertTrue(testee.sum(-10,  -25) == -35);
 	}
 	
+	// Test methods for addition overflow handling method
+	// 1
+	@Test (expected=ArithmeticException.class)
+	public void testSumWithOverflowHandlingException() {
+		assertTrue(testee.sumWithOverflowHandlingException(Integer.MAX_VALUE,  2) != 0);
+	}
+	
+	// 2
+	// 3
+	// 4
+	// 5
+	// 6
+	// 7
+	// 8
+	
 	// SUBTRACTION TEST METHODS
 	@Test
 	public void testSubtractionTwoPositivesIsOk() {
@@ -47,6 +62,9 @@ public class CalculatorTest {
 	public void testSubtractionTwoNegativesIsOk() {
 		assertTrue(testee.subtract(-25,  -10) == -15);
 	}
+	
+	// Test methods for subtraction overflow handling method
+	
 	
 	// DIVISION TEST METHODS
 	// No exception expected - otherwise: test has an error
@@ -60,6 +78,9 @@ public class CalculatorTest {
 //	public void testDivisionForceUnexpectedException() throws java.lang.ArithmeticException {
 //		assertTrue(testee.divide(10, 0) == 5);
 //	}
+	
+	// Test methods for division overflow handling method
+	
 	
 	// VISIBILITY TEST METHODS
 	// Exception expected - otherwise: test has an error

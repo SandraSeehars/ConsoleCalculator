@@ -15,45 +15,29 @@ public class Calculator {
 		return summand1 + summand2; 
 	}
 	
-	// Addition methods with overflow handlings
-	// 1
-	// 2
-	// 3
-	// 4
-	// 5
-	// 6
-	// 7
-	// 8
+	// Addition method with overflow handlings
+	public int sumWithOverflowHandlingException(int summand1, int summand2) throws ArithmeticException {
+		long value = (long) summand1 + (long) summand2;
+		if ((value > Integer.MAX_VALUE) || (value < Integer.MIN_VALUE)) {
+			throw new ArithmeticException();
+		}
+		return summand1 + summand2; 
+	}
 	
 	// SUBTRACTION METHODS
 	public int subtract(int minuend, int subtrahend) {
 		return minuend - subtrahend; 
 	}
 	
-	// Subtraction methods with overflow handling
-	// 1
-	// 2
-	// 3
-	// 4
-	// 5
-	// 6
-	// 7
-	// 8
+	// Subtraction method with overflow handling
 	
 	// DIVISION METHODS
 	public int divide(int dividend, int divisor) {
 		return dividend / divisor; 
 	}
 	
-	// Division methods with overflow handling
-	// 1
-	// 2
-	// 3
-	// 4
-	// 5
-	// 6
-	// 7
-	// 8
+	// Division method with overflow handling
+
 	
 	// VISIBILITY METHODS (until line 49)
 	protected String helloWorldProtected(String string) {
