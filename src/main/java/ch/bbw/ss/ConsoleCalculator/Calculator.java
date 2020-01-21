@@ -37,4 +37,10 @@ public class Calculator {
 		System.out.println(string);
 		return string; 
 	}
+	
+	// this is a error source because unused private method
+	private String helloWorldPrivate(String string) {
+		System.out.println(string);
+		return string; 
+	}
 }
